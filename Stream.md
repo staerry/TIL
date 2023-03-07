@@ -169,7 +169,6 @@
            .forEach(System.out:;print);        
 ```
 
-
 ## 스트림의 최종 연산
 * 최종 연산은 스트림의 요소를 소모해서 결과를 만들어 냅니다.
 * 따라서 최종 연산 후에는 스트림이 닫히게 되고 더 이상 사용할 수 없습니다.
@@ -186,6 +185,10 @@
 ```
  boolean noFailed = stuStream.anyMatch(s -> s.getTotalScore() <= 100)
 ```
+
+## reduce()
+* Stream.reduce(accumulator) : Stream의 요소들을 하나의 데이터로 만드는 작업을 수행합니다.
+ * accumulator - 연산을 수행하는 부분으로, 직접 구현해서 인자로 전달해야 합니다.
 
 ### 통계 - count(), sum(), average(), max(), min()
 
